@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Orinoco - Panier</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="css/style.css">
+        <script defer src="js/cart.js"></script>
+    </head>
+    <body>
+        <header class="header">
+            <nav class="header-menu">
+                <a href="index.html" ><img src="images/LOGO.png" class="header-logo"></a>
+                <a href="cart.html" class="header-menu-item"><i class="fas fa-shopping-cart"></i><span>Mon panier</span></a>
+            </nav>
+        </header>
+        <div class="mainSection" id="myCart">
+            <div class="myBox">
+                <div class="myBoxContent">
+                    <h1 class="myBoxTitle">Mon panier</h1>
+                    <table id="cartList" class="tableCart">
+                        <tr><td colspan="2" class="tableCartHeader">Produit</td><td class="tableCartHeader">Prix unitaire</td><td class="tableCartHeader">Quantité</td><td class="tableCartHeader">Total</td></tr>
+                    </table>
+                    <table class="tableCart">
+                        <tr><td colspan="4" class="tableCartHeader">Total de la commande</td><td id="total"></td></tr>
+                    </table>
+                </div>
+            </div>
+            <div class="myBox">
+                <div class="myBoxContent">
+                    <h1 class="myBoxTitle">Mes informations</h1>
+                    <form id="order-form" class="order-form" method="post" action="javascript:sendOrder();">
+                        <label>Prénom <input type="text" id="firstName" value="John" required pattern="[a-zA-Z\u00C0-\u017F\s]+"></label>
+                        <label>Nom <input type="text" id="lastName" value="Doe"required pattern="[a-zA-Z\u00C0-\u017F\s]+"></label>
+                        <label>Adresse <input type="text" id="address" value="Unnamed road" required pattern="[0-9a-zA-Z\u00C0-\u017F\s-]+"></label>
+                        <label>Commune <input type="text" id="city" value="Null Island" required pattern="[a-zA-Z\u00C0-\u017F\s-]+"></label>
+                        <label>Email <input type="email" id="email" value="john.doe@email.com" required pattern="^\S+@\S+$"></label>
+                        <input type="submit" value="Valider la commande">
+        
+                    </form>
+                </div>
+            </div>  
+        </div>
+    </body>
+</html>
