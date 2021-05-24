@@ -1,15 +1,16 @@
-fetch("http://localhost:3000/api/teddies/")
+function loadProducts(){
+    fetch("http://localhost:3000/api/teddies/")
     .then(function (response) {
         return response.json();
     })
     .then(function (data) {
-        appendData(data);
+        setDataProducts(data);
     })
     .catch(function (err) {
         console.log(err);
     });
-
-function appendData(data) {
+}
+function setDataProducts(data) {
     let listeProduits = document.getElementById("product-list");
     for (let i = 0; i < data.length; i++) {
         let div = document.createElement("div");
@@ -18,3 +19,4 @@ function appendData(data) {
         listeProduits.appendChild(div);
     }
 }
+loadProducts();

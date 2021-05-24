@@ -1,20 +1,21 @@
-let url = new URL(document.location.href);
-let id = url.searchParams.get("id");
-fetch("http://localhost:3000/api/teddies/" + id)
-.then(function (response) 
-{
-    return response.json();
-})
-.then(function (data)
-{
-    appendData(data);
-})
-.catch(function (err)
-{
-    console.log(err);
-});
-
-function appendData(data)
+function loadProduct(){
+    let url = new URL(document.location.href);
+    let id = url.searchParams.get("id");
+    fetch("http://localhost:3000/api/teddies/" + id)
+    .then(function (response) 
+    {
+        return response.json();
+    })
+    .then(function (data)
+    {
+        setDataProduct(data);
+    })
+    .catch(function (err)
+    {
+        console.log(err);
+    });
+}
+function setDataProduct(data)
 {
     console.log(data);
     let filArianeLink = document.getElementById("product-fa");
@@ -52,3 +53,4 @@ function appendData(data)
         addToCart(data['_id'], data['price']);
     }
 }
+loadProduct();

@@ -4,7 +4,6 @@ function createCart(){
         localStorage.setItem("productsInCart", "[]");
     }
 }
-
 function addToCart(id, price)
 {
     let btnCart = document.getElementById("addCart");
@@ -35,7 +34,6 @@ function addToCart(id, price)
         localStorage.setItem("productsInCart", JSON.stringify(productsInCartArray)); 
     });
 }
-
 function getCart(){
     let productsInCart = JSON.parse(localStorage.getItem("productsInCart"));
     let cartList = document.getElementById("cartList");
@@ -76,7 +74,6 @@ function getCart(){
         totalCell.innerText = somme + ' €';
     }
 }
-
 function deleteProduct(id)
 {
     let productsInCart = JSON.parse(localStorage.getItem("productsInCart"));
@@ -89,7 +86,6 @@ function deleteProduct(id)
         }
     }
 }
-
 function sendOrder()
 {
     const firstName = document.getElementById("firstName");
@@ -137,7 +133,6 @@ function sendOrder()
         });
     }
 }
-
 function getOrder(){
     let orderArray = JSON.parse(localStorage.getItem("orderArray"));
     let orderId = document.getElementById("orderId");
@@ -155,7 +150,6 @@ function getOrder(){
     priceSpan.innerText = ' ' + priceSpan.innerText + total + ' €';
     localStorage.clear();
 }
-
 let myCart = document.getElementById("myCart");
 if(myCart){
     myCart.addEventListener("load", getCart());
@@ -164,5 +158,4 @@ let myOrder = document.getElementById("myOrder");
 if(myOrder){
     myOrder.addEventListener("load", getOrder());
 }
-
 createCart();

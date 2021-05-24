@@ -13,7 +13,7 @@
     <body>
         <header class="header">
             <nav class="header-menu">
-                <a href="index.html" ><img src="images/LOGO.png" class="header-logo"></a>
+                <a href="index.html" ><img src="images/LOGO.png" class="header-logo" alt="Logo"></a>
                 <a href="cart.html" class="header-menu-item"><i class="fas fa-shopping-cart"></i><span>Mon panier</span></a>
             </nav>
         </header>
@@ -33,11 +33,11 @@
                 <div class="myBoxContent">
                     <h1 class="myBoxTitle">Mes informations</h1>
                     <form id="order-form" class="order-form" method="post" action="javascript:sendOrder();">
-                        <label>Prénom <input type="text" id="firstName" value="John" required pattern="[a-zA-Z\u00C0-\u017F\s]+"></label>
-                        <label>Nom <input type="text" id="lastName" value="Doe"required pattern="[a-zA-Z\u00C0-\u017F\s]+"></label>
-                        <label>Adresse <input type="text" id="address" value="Unnamed road" required pattern="[0-9a-zA-Z\u00C0-\u017F\s-]+"></label>
-                        <label>Commune <input type="text" id="city" value="Null Island" required pattern="[a-zA-Z\u00C0-\u017F\s-]+"></label>
-                        <label>Email <input type="email" id="email" value="john.doe@email.com" required pattern="^\S+@\S+$"></label>
+                        <label>Prénom <input type="text" id="firstName" required pattern="[a-zA-Z\u00C0-\u017F\s]+"></label>
+                        <label>Nom <input type="text" id="lastName" required pattern="[a-zA-Z\u00C0-\u017F\s]+"></label>
+                        <label>Adresse <input type="text" id="address" required pattern="[0-9a-zA-Z\u00C0-\u017F\s-]+"></label>
+                        <label>Commune <input type="text" id="city" required pattern="[a-zA-Z\u00C0-\u017F\s-]+"></label>
+                        <label>Email <input type="email" id="email" required pattern="^\S+@\S+$"></label>
                         <input type="submit" value="Valider la commande">
         
                     </form>

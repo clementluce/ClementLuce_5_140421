@@ -228,7 +228,7 @@ input[type=text], input[type=email] {
   outline: none;
   transition: linear 0.2s;
 }
-input[type=text]:invalid, input[type=email]:invalid {
+input[type=text]:required:invalid, input[type=email]:required:invalid {
   border-color: #e74c3c;
   transition: linear 0.2s;
 }
