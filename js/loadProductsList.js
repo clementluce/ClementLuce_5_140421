@@ -1,4 +1,5 @@
 function loadProducts(){
+    // récupération de la liste des produits
     fetch("http://localhost:3000/api/teddies/")
     .then(function (response) {
         return response.json();
@@ -12,6 +13,7 @@ function loadProducts(){
 }
 function setDataProducts(data) {
     let listeProduits = document.getElementById("product-list");
+    // pour chaque produit de la liste, créer une carte et y afficher les infos
     for (let i = 0; i < data.length; i++) {
         let div = document.createElement("div");
         div.classList.add('productLink');

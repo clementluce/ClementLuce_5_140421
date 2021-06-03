@@ -228,8 +228,8 @@ input[type=text], input[type=email]{
     margin:3px 0px;
     outline:none;
     transition: linear 0.2s;
-    &:required:invalid{
-        border-color:#e74c3c;
+    &:required:valid{
+        border-color:#6ab04c;
         transition: linear 0.2s;
     }
     &:focus{
